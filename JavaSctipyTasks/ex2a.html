@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise #2A</title>
+  <style>
+    div {
+      width:200px;
+      height:200px;
+      border:1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="btn" onclick="makeitcolory()"></div>
+
+
+<script>
+  let x =Math.floor(Math.random() * 3)
+  document.getElementById("btn").style.backgroundColor = arr[x];
+  
+  let counter=0;
+  // document.getElementById("btn").style.backgroundColor = "blue";
+  let arr = ["red","green","blue"]; 
+  function makeitcolory() {
+    
+    for(let i=0; i<arr.length; i++){
+      document.getElementById("btn").style.backgroundColor = arr[counter];
+      if(counter==arr.length){
+      counter=0;
+    }
+  }
+  counter++;
+}
+
+
+
+</script>
+
+</body>
+</html>

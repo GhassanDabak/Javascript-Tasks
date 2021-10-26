@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise #5</title>
+  <style>
+    p {
+      display:inline; 
+    }
+    button {
+      display:none;
+    }
+  </style>
+</head>
+<body>
+  
+  <label for="pw">Password (min 6 character):</label>
+  <input type="password" id="pass" required oninput="formVal()">
+  <p id="hide"></p><br><br>
+  <label for="repw">Repeat password:</label>
+  <input type="password" id="repass" required oninput="formVal()">
+  <p id="hide2"></p><br>
+
+  <button type="submit" id="btn">submit</button>
+
+  <script>
+  
+    function formVal() {
+      const x =document.getElementById("pass");
+      if(x.value.length<6){
+        document.getElementById("hide").innerHTML = "Too Short";
+        document.getElementById("hide").style.color = "red";
+      }else{
+        document.getElementById("hide").style.display = "none";
+      }
+      const y = document.getElementById("repass");
+      if(y.value===x.value){
+        btn.style.display="block";
+        hide2.style.display="none";
+      } else {
+        hide2.innerHTML = "The two password don't match";
+        hide2.style.color="red";  
+      }
+    }
+
+  </script>
+</body>
+</html>

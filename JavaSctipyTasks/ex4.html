@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise #4 Text Changer</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Festive&family=Montserrat:wght@100&family=Oswald:wght@200&display=swap');
+    div {
+      width:50%;
+      height:15vh;
+      border:1px solid black;
+      margin:20px;
+    }
+  </style>
+</head>
+<body>
+  <select id="demo" onchange="fn(this)">
+    <option value="festive">Festive</option>
+    <option value="mont">Montserrat</option>
+    <option value="oswald">Oswald</option>
+  </select>
+
+  <select id="test" onchange="fpt(this)">
+    <option value="12pt">12pt</option>
+    <option value="14pt">14pt</option>
+    <option value="16pt">16pt</option>
+  </select>
+
+  <label>Italic</label>
+  <input type="checkbox" id="ital" onclick="it()">
+  <label>bold</label>
+  <input type="checkbox" id="bol" onclick="fbo()">
+  <label>Underline</label>
+  <input type="checkbox" id="uline" onclick="fuline()">
+  
+  <div id="text">
+    The quick brown fox jumps over the lazy dog
+  </div>
+
+  <script>
+    function fn(el) {
+      const option=el.value;
+      if(option=="festive"){
+        document.getElementById("text").style.fontFamily = "Festive";
+      }
+      if(option=="mont"){
+        document.getElementById("text").style.fontFamily = "Montserrat";
+      }
+      if(option=="oswald"){
+        document.getElementById("text").style.fontFamily = "Oswald";
+      }
+    }
+
+    function fpt(el) {
+      const option=el.value;
+      if(option=="12pt"){
+        document.getElementById("text").style.fontSize = "12pt";
+      }
+      if(option=="14pt"){
+        document.getElementById("text").style.fontSize = "14pt";
+      }
+      if(option=="16pt"){
+        document.getElementById("text").style.fontSize = "16pt";
+      }
+    }
+
+    function it() {
+      let x = document.getElementById("ital");
+      if(x.checked==true){
+        document.getElementById("text").style.fontStyle = "italic";
+      } else {
+        text.style.fontStyle = "normal";
+      }
+    }
+
+    function fbo() {
+      let y = document.getElementById("bol");
+      if(y.checked==true) {
+        document.getElementById("text").style.fontWeight = "bold";
+      }else {
+        document.getElementById("text").style.fontWeight = "normal";
+      }
+    }
+
+    function fuline() {
+      let z = document.getElementById("uline");
+      if(z.checked==true) {
+        document.getElementById("text").style.textDecoration = "underline";
+      } else {
+        document.getElementById("text").style.textDecoration = "none";
+      }
+    }
+
+
+  </script>
+</body>
+</html>

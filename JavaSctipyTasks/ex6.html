@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise #6 </title>
+  <style>
+    section {
+      width: 25%;
+      border: 1px solid black;
+      padding: 1em;
+    }
+
+    h1 {
+      background-color: lightgray;
+      display: inline;
+    }
+
+    /* #fl {
+      
+      display:block;
+    } */
+    label {
+      text-decoration: underline;
+      color: blue;
+      border: none;
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>
+      What is lorem ipsum?
+    </h1>
+    <label id="hide1" onclick="togg1()">show</label>
+    <p id="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo obcaecati aut officia magnam accusantium
+      blanditiis, nulla maxime quasi hic numquam rerum possimus voluptatem in porro neque, aspernatur fugiat deserunt
+      fuga molestiae provident optio expedita? Veniam et consectetur dignissimos! Eveniet explicabo officia nulla itaque
+      provident consequuntur minus quaerat tempora minima exercitationem.</p>
+    <label id="hide2" onclick="tog1()">hide</label>
+  </section>
+
+  <section>
+    <h1>
+      What is lorem ipsum?
+    </h1>
+    <label id="hide3" onclick="togg2()">show</label>
+    <p id="text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo obcaecati aut officia magnam accusantium
+      blanditiis, nulla maxime quasi hic numquam rerum possimus voluptatem in porro neque, aspernatur fugiat deserunt
+      fuga molestiae provident optio expedita? Veniam et consectetur dignissimos! Eveniet explicabo officia nulla itaque
+      provident consequuntur minus quaerat tempora minima exercitationem.</p>
+    <label id="hide4" onclick="tog2()">hide</label>
+  </section>
+
+  <section>
+    <h1>
+      What is lorem ipsum?
+    </h1>
+    <label id="hide5" onclick="togg3()">show</label>
+    <p id="text3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo obcaecati aut officia magnam accusantium
+      blanditiis, nulla maxime quasi hic numquam rerum possimus voluptatem in porro neque, aspernatur fugiat deserunt
+      fuga molestiae provident optio expedita? Veniam et consectetur dignissimos! Eveniet explicabo officia nulla itaque
+      provident consequuntur minus quaerat tempora minima exercitationem.</p>
+    <label id="hide6" onclick="tog3()">hide</label>
+  </section>
+
+
+
+
+  <script>
+    hide4.style.display = "none";
+    text2.style.display = "none";
+    hide2.style.display = "none";
+    text1.style.display = "none";
+    text3.style.display = "none";
+    hide6.style.display = "none";
+
+    function tog1() {
+      text1.style.display = "none";
+      hide2.style.display = "none";
+      hide1.style.display = "inline-block";
+    }
+
+    function togg1() {
+      text1.style.display = "block";
+      hide2.style.display = "inline-block";
+      hide1.style.display = "none";
+    }
+
+    function tog2() {
+      text2.style.display = "none";
+      hide4.style.display = "none";
+      hide3.style.display = "inline-block";
+    }
+
+    function togg2() {
+      text2.style.display = "block";
+      hide4.style.display = "inline-block";
+      hide3.style.display = "none";
+    }
+
+    function tog3() {
+      text3.style.display = "none";
+      hide6.style.display = "none";
+      hide5.style.display = "inline-block";
+    }
+
+    function togg3() {
+      text3.style.display = "block";
+      hide6.style.display = "inline-block";
+      hide5.style.display = "none";
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <meta charset="UTF-8"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise #7A</title>
+  <style>
+    .contain div {
+      width:100%;
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .contain {
+      background-color:lightgray;
+     
+      
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="txt">
+  <button id="btn" onclick="">Add Song</button>
+  <div id="container" class="contain">
+
+  </div>
+
+
+
+
+  <script>
+    document.getElementById("btn").addEventListener("click",myFunc);
+    document.getElementById("")
+    
+    function myFunc() {
+      let z = document.createElement("div");
+      z.innerHTML = txt.value;
+      container.appendChild(z);
+      let y = document.createElement("button");
+      y.innerHTML = "Remove";
+      y.addEventListener("click",function remov(){
+        z.remove();
+        
+      })
+      z.appendChild(y);
+    } 
+  </script>
+</body>
+</html>
